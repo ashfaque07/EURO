@@ -1,4 +1,2 @@
-prdxn-dev-framework
+framework
 ===================
-
-PRDXN's "starting package" used for development.
