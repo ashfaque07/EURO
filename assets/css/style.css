@@ -862,7 +862,7 @@ h6 a { display: inline-block; }
     padding: 10.5px 0;
     margin-left: -5px;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     background: #439fe3;
     color: #fff;
     font-size: 15px;
