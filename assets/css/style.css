@@ -698,9 +698,15 @@ h6 a { display: inline-block; }
   /*opacity: 0.9;*/
   background: #fff;
 }
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 
 .modal-box .image-wrap{
-  width: 25%;
+  width: 50%;
   display: inline-block;
 }
 
@@ -905,6 +911,7 @@ h6 a { display: inline-block; }
 
   h5 a:hover { text-decoration: none; }
   .business img { width: 75%; }
+  .business .modal-content img { width: 100%; }
 
   .business-list li {
     width: 40%;
@@ -1036,9 +1043,9 @@ h6 a { display: inline-block; }
     margin-right: 0;
   }
 
-  .business .image-wrap { display: none; }
+  /*.business .image-wrap { display: none; }*/
   .flagship { padding: 68px 0 80px; }
   .newsletter { padding: 50px 0 60px; }
   .treasury { padding: 47px 0 60px; }
+  .modal-content { width: 90%; }
 }
-
