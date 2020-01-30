@@ -221,10 +221,26 @@ $('#submitData').click( function(e){
 // ------------------------------- Modal for Our core business -----------------------------------
 
 $(document).ready(function(){
-	$('#business .business-list li').click(function(){
+	let modalItem = document.getElementsByClassName('mod-img');
+	let modalImage = document.getElementsByClassName('modal-img')[0];
+	$('#business .business-list li .mod-img').click(function(){
+		modalImage.setAttribute('src', this.getAttribute('src'));
 		$("#modal-box").fadeIn(1000);
+			var scrollPosition = [
+			self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+			self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+		];
+		var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+		html.data('scroll-position', scrollPosition);
+		html.data('previous-overflow', html.css('overflow'));
+		html.css('overflow', 'hidden');
+		window.scrollTo(scrollPosition[0], scrollPosition[1]);
 	})
 	$('#modal-box .modal-close').click(function(){
 		$("#modal-box").fadeOut(1000);
+		var html = jQuery('html');
+		var scrollPosition = html.data('scroll-position');
+		html.css('overflow', html.data('previous-overflow'));
+		window.scrollTo(scrollPosition[0], scrollPosition[1])
 	})
 })
